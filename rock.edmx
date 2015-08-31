@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="rockModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="rockModelStoreContainer">
+          <EntitySet Name="rock_jmeter" EntityType="rockModel.Store.rock_jmeter" store:Type="Tables" Schema="rock" />
+        </EntityContainer>
+        <EntityType Name="rock_jmeter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RecordTimeStamp" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="AssertionResult_Name" Type="varchar" />
+          <Property Name="AssertionResult_Failure" Type="varchar" />
+          <Property Name="AssertionResult_Error" Type="varchar" />
+          <Property Name="ResponseHeader" Type="text" />
+          <Property Name="ResponseData" Type="text" />
+          <Property Name="RequestHeader" Type="text" />
+          <Property Name="QueryString" Type="text" />
+          <Property Name="ResponseTime" Type="int" />
+          <Property Name="CGIName" Type="varchar" />
+          <Property Name="ReturnCode" Type="int" />
+          <Property Name="Cookies" Type="text" />
+          <Property Name="Url" Type="varchar" />
+          <Property Name="Method" Type="varchar" MaxLength="10" />
+          <Property Name="TestMachineIP" Type="varchar" />
+          <Property Name="ThreadName" Type="text" />
+          <Property Name="ParentCGIName" Type="varchar" />
+          <Property Name="AppName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="SeqNum" Type="varchar" MaxLength="45" />
+          <Property Name="JmxFileName" Type="varchar" MaxLength="100" />
+          <Property Name="exeUser" Type="varchar" MaxLength="45" />
+          <Property Name="numInSameSeq" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="rockModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="rockEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="rock_jmeter" EntityType="rockModel.rock_jmeter" />
+        </EntityContainer>
+        <EntityType Name="rock_jmeter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RecordTimeStamp" Type="DateTimeOffset" Nullable="false" />
+          <Property Name="AssertionResult_Name" Type="String" />
+          <Property Name="AssertionResult_Failure" Type="String" />
+          <Property Name="AssertionResult_Error" Type="String" />
+          <Property Name="ResponseHeader" Type="String" />
+          <Property Name="ResponseData" Type="String" />
+          <Property Name="RequestHeader" Type="String" />
+          <Property Name="QueryString" Type="String" />
+          <Property Name="ResponseTime" Type="Int32" />
+          <Property Name="CGIName" Type="String" />
+          <Property Name="ReturnCode" Type="Int32" />
+          <Property Name="Cookies" Type="String" />
+          <Property Name="Url" Type="String" />
+          <Property Name="Method" Type="String" />
+          <Property Name="TestMachineIP" Type="String" />
+          <Property Name="ThreadName" Type="String" />
+          <Property Name="ParentCGIName" Type="String" />
+          <Property Name="AppName" Type="String" Nullable="false" />
+          <Property Name="SeqNum" Type="String" />
+          <Property Name="JmxFileName" Type="String" />
+          <Property Name="exeUser" Type="String" />
+          <Property Name="numInSameSeq" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="rockModelStoreContainer" CdmEntityContainer="rockEntities">
+          <EntitySetMapping Name="rock_jmeter"><EntityTypeMapping TypeName="rockModel.rock_jmeter"><MappingFragment StoreEntitySet="rock_jmeter">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="RecordTimeStamp" ColumnName="RecordTimeStamp" />
+            <ScalarProperty Name="AssertionResult_Name" ColumnName="AssertionResult_Name" />
+            <ScalarProperty Name="AssertionResult_Failure" ColumnName="AssertionResult_Failure" />
+            <ScalarProperty Name="AssertionResult_Error" ColumnName="AssertionResult_Error" />
+            <ScalarProperty Name="ResponseHeader" ColumnName="ResponseHeader" />
+            <ScalarProperty Name="ResponseData" ColumnName="ResponseData" />
+            <ScalarProperty Name="RequestHeader" ColumnName="RequestHeader" />
+            <ScalarProperty Name="QueryString" ColumnName="QueryString" />
+            <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+            <ScalarProperty Name="CGIName" ColumnName="CGIName" />
+            <ScalarProperty Name="ReturnCode" ColumnName="ReturnCode" />
+            <ScalarProperty Name="Cookies" ColumnName="Cookies" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+            <ScalarProperty Name="TestMachineIP" ColumnName="TestMachineIP" />
+            <ScalarProperty Name="ThreadName" ColumnName="ThreadName" />
+            <ScalarProperty Name="ParentCGIName" ColumnName="ParentCGIName" />
+            <ScalarProperty Name="AppName" ColumnName="AppName" />
+            <ScalarProperty Name="SeqNum" ColumnName="SeqNum" />
+            <ScalarProperty Name="JmxFileName" ColumnName="JmxFileName" />
+            <ScalarProperty Name="exeUser" ColumnName="exeUser" />
+            <ScalarProperty Name="numInSameSeq" ColumnName="numInSameSeq" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="rock" ZoomLevel="70">
+        <EntityTypeShape EntityType="rockModel.rock_jmeter" Width="1.5" PointX="0.75" PointY="0.75" Height="4.7149055989583326" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
