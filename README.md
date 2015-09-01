@@ -1,6 +1,7 @@
 # Jmeter自动化监控
 环境:Windows 7以上，.NET 4.0以上
-运行jmeter脚本后入mysql数据库。需要用db.sql先建表。
+
+运行jmeter脚本后入mysql数据库。需要用db.sql先建表。请用Visual Studio 2010以上编译项目后生成exe文件。
 使用前注意配置app.config中的配置:
 数据库连接字符串请修改为自身环境的数据库连接字符串
 
