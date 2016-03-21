@@ -31,4 +31,4 @@
 后续可以配合告警模块，日报模块，页面模块等实现完整的监控系统。
     
  
-注意:jmeter必须增加一个察看结果树，并且configure需要全部勾选，另外日志部分需要设置为${JmeterAuto_LogFile}
+注意:jmeter必须增加一个察看结果树，并且configure需要全部勾选，另外日志部分需要设置为${__P(JmeterAuto_LogFile)}
